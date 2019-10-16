@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax effect task</title>
+        <script src="jquery3_4_1_dev.js"></script>
+        <link rel='stylesheet' type='text/css' href='styles.css'></link>
+        <script>
+            console.log("Called parallax");
+            $(document).ready(function() {
+                $(window).scroll(function(e) {
+                var sc = $(window).scrollTop();
+                $(".ai, .im").css("top",(-(sc)/7)+"px");
+                $(".im").css("top", (sc)/2+"px");
+                // $(".container").css("transform", "rotate(3deg)");
+                $(".txtcont").css("transition", "all 0.5s");
+                $(".txtcont").css('top',(0-(sc/2))+'px');
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <div id="content">
+            <h1 id="title" class="txtcont" style="transform: translate(0px, -25%);position: relative;"> Nature </h1>
+
+        <div id="vid1" class="container">
+            <img class="ai" src="src/stars.gif" alt="Starry sky animated"></img>
+            <h1 class="txtcont" style="transform: translate(0px, -3000%);"> Starry sky animated</h1>
+        </div>
+        <div id="img1" class="container" style="transform: translate(0px, -5%);">
+            <img class="im" src="src/star.jpg" alt="Starry sky" style="transform: translate(0px, -45%);"></img>
+            <h1 class="txtcont"> Starry sky </h1>
+        </div>
+        <div id="vid2" class="container" style="transform: translate(0px, -5%);">
+            <img class="ai" src="src/water.gif" alt="water animated"style="transform: translate(0px, 30%);"></img>
+            <h1 class="txtcont" style="transform: translate(0px, 1200%);"> Water </h1>
+        </div>
+        <div id="img2" class="container" style="transform: translate(0px, -5%);">
+            <img class="im" src="src/sea.jpg" alt="Sea" style="transform: translate(0px, -170%);"></img>
+            <h1 class="txtcont" style="transform: translate(0px, 1800%);"> Sea </h1>
+        </div>
+        <div id="vid3" class="container" style="transform: translate(0px, -5%);">
+            <img class="ai" src="src/sun.gif" alt="Tyndal animated" style="transform: translate(0px, 50%);"></img>
+            <h1 class="txtcont" style="transform: translate(0px, 2800%);"> Tyndall Effect </h1>
+        </div>
+        <div id="img3" class="container" style="transform: translate(0px, -30%);">
+            <img class="im" src="src/forest.jpg" alt="forest" style="transform: translate(0, -350%)"></img>
+            <h1 class="txtcont" style="transform: translate(0px, 5200%);"> Forest </h1>
+        </div>
+        <div style="transform: translate(0px, -30%);">
+            <h1 style="color: white; text-align: center; font-family: 'Courier New', Courier, monospace">
+                Parallax scrolling effect by Surya Prakash V
+            </h1>
+        </div>
+    </div>
+    </body>
+</html>
